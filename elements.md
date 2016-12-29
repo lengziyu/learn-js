@@ -141,3 +141,225 @@ $(el).attr('tabindex');
 //IE8+
 el.getAttributes('tabindex');
 ```
+
+### Get HTML
+```
+//jquery
+$(el).html();
+
+//IE8+
+el.innerHTML;
+```
+
+### Get Outer Html
+```
+//jquery
+$('div').append($(el).clone()).html();
+
+//IE8+
+el.outerHtml
+```
+
+### Get Style
+```
+//jquery
+$(el).css(ruleName);
+
+//IE9+
+getComputedStyle(el)[ruleName];
+```
+
+### Get Text
+```
+//jquery
+$(el).text();
+
+//IE8+
+el.textContent;
+```
+
+### Has Class
+```
+//jquery
+$(el).hasClass(className);
+
+//IE8+
+if(el.classList){
+ el.classList.contains(className);
+}else{
+ new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+}
+```
+
+### Matches
+```
+//jquery
+$(el).is($(ortherEl));
+
+//IE8+
+el === ortherEl
+```
+
+### Next
+```
+//jquery
+$(el).next();
+
+//IE9+
+el.nextElementSbling;
+```
+
+### Outer Width
+```
+//jquery
+$(el).outerWidth()
+
+//IE8+
+el.offsetWidth;
+```
+
+### Outer Height
+```
+//jquery
+$(el).outerHeight();
+
+//IE8+
+el.offsetHeight;
+```
+
+### Parent
+```
+//jquery
+$(el).parent();
+
+//IE8+
+el.parentNode;
+```
+
+### Position
+```
+//jquery
+$(el).position();
+
+//IE8+
+{
+  left: el.offsetLeft,
+  top: el.offsetTop
+}
+```
+
+### Perpend(在什么地方之前插件内容)
+```
+//jquery
+$(parent).perpend(el);
+
+//IE8+
+parent.inserBefor(el, parent.firstChild);
+```
+
+### Prev
+```
+//jquery
+$(el).prev();
+
+//IE9+
+el.previousElementSibling
+```
+
+### Remove
+```
+//jquery
+$(el).remove();
+
+//IE8+
+el.parentNode.removeChild(el);
+```
+
+### Remove Class
+```
+//jquery
+$(el).removeClass(className);
+
+//IE8+
+if(el.classList){
+  el.classList.remove(className);
+}else{
+  el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+}
+```
+
+### Replace From Html(替换内容)
+```
+//jquery
+$(el).replaceWidth(string);
+
+//IE8+
+el.outerHTML = string;
+```
+
+### Set Attributes
+```
+//jquery
+$(el).attr('value', 3);
+
+//IE8+
+el.setAttributes('value', 3);
+```
+
+### Set Html
+```
+//jquery
+$(el).html(string);
+
+//IE8+
+el.innerHTML = string;
+```
+
+### Set Text
+```
+//jquery
+$(el).text(string);
+
+//IE8+
+el.textContent = string;
+```
+
+### Set Style
+```
+//juqery
+$(el).css('border-color', '#000000');
+
+//IE8+
+el.style.borderColor = '#000000';
+```
+
+### Siblings
+```
+//jquery
+$(el).siblings();
+
+//IE8+
+Array.prototype.filter.call(el.parentNode.children, function(child) {
+  return child !== el
+})
+```
+
+### Toggle Class
+```
+//jquery
+$(el).toggleClass(className);
+
+//IE9+
+if(el.classList){
+  el.classList.toggle(className);
+}else{
+  var classes = el.className.split('');
+  var existingIndex = classes.indexOf(className);
+  if(existingIndex >= 0){
+    classes.splice(existingIndex, 1);
+  }else{
+    classes.push(className);
+  }
+  el.className = classes.join('');
+}
+```
