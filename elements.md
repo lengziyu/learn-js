@@ -1,7 +1,46 @@
 # DOM操作
 > 与jQuery对比
 
-### Add Class
+- [Add Class](#Add Class)
+- [After](#After)
+- [Before](#Before)
+- [Append](#Append)
+- [Children](#Children)
+- [Clone](#Clone)
+- [Contains](#Contains)
+- [Contains Selector](#Contains Selector)
+- [Each](#Each)
+- [Empty](#Empty)
+- [Filter](#Filter)
+- [Find Children](#Find Children)
+- [Find Elements](#Find Elements)
+- [Get Attributes](#Get Attributes)
+- [Get HTML](#Get HTML)
+- [Get Outer Html](#Get Outer Html)
+- [Get Style](#Get Style)
+- [Get Text](#Get Text)
+- [Has Class](#Has Class)
+- [Matches](#Matches)
+- [Next](#Next)
+- [Outer Width](#Outer Width)
+- [Outer Height](#Outer Height)
+- [Parent](#Parent)
+- [Position](#Position)
+- [Perpend](#Perpend)
+- [Prev](#Prev)
+- [Remove](#Remove)
+- [Remove Class](#Remove Class)
+- [Replace From Html](#Replace From Html)
+- [Set Attributes](#Set Attributes)
+- [Set Html](#Set Html)
+- [Set Text](#Set Text)
+- [Set Style](#Set Style)
+- [Siblings](#Siblings)
+- [Toggle Class](#Toggle Class)
+
+
+Add Class
+---------
 ```
 //jquery
 $(el).addClass(className);
@@ -14,7 +53,8 @@ if(el.classList){
   el.className += '' + className;
 };
 ```
-### After
+After
+-----
 ```
 //jquery
 $(el).after(htmlString);
@@ -23,7 +63,8 @@ $(el).after(htmlString);
 el.inserAdjacentHTML('afterend', htmlString);
 ```
 
-### Before
+Before
+------
 ```
 //jquery
 $(el).before(htmlString);
@@ -32,7 +73,8 @@ $(el).before(htmlString);
 el.insterAdjacentHTML('beforebegin', htmlString);
 ```
 
-### Append
+Append
+------
 ```
 //juqery
 $(parent).append(el);
@@ -41,7 +83,8 @@ $(parent).append(el);
 parent.appendChild(el);
 ```
 
-### Children
+Children
+--------
 ```
 //jquery
 $(el).children();
@@ -50,7 +93,8 @@ $(el).children();
 el.children;
 ```
 
-### Clone
+Clone
+-----
 ```
 //jquery
 $(el).clone();
@@ -59,7 +103,8 @@ $(el).clone();
 el.cloneNode(true);
 ```
 
-### Contains
+Contains
+--------
 ```
 //jquery
 $.contains(el, child);
@@ -69,7 +114,8 @@ el !== child && el.contains(child);
 ```
 
 
-### Contains Selector
+Contains Selector
+-----------------
 ```
 //jquery
 $(el).find(selector).length;
@@ -78,7 +124,8 @@ $(el).find(selector).length;
 el.querySelector !== null;
 ```
 
-### Each
+Each
+----
 ```
 //jquery
 $(selector).each(function(i, el) {
@@ -92,7 +139,8 @@ Array.prototype.forEach.call(elements, function(el, i) {
 });
 ```
 
-### Empty
+Empty
+-----
 ```
 //jquery
 $(el).empty();
@@ -101,7 +149,8 @@ $(el).empty();
 el.innerHTML = '';
 ```
 
-### Filter
+Filter
+------
 ```
 //jquery
 $(selector).filter(function() {
@@ -115,7 +164,8 @@ Array.prototype.filter.call(elements, function() {
 });
 ```
 
-### Find Children
+Find Children
+-------------
 ```
 //jquery
 $(el).find(selector);
@@ -124,7 +174,8 @@ $(el).find(selector);
 el.querySelectorAll(selector);
 ```
 
-### Find Elements
+Find Elements
+-------------
 ```
 //jquery
 $('#my .selector');
@@ -133,7 +184,8 @@ $('#my .selector');
 document.querySelectorAll('#my .selector');
 ```
 
-### Get Attributes
+Get Attributes
+--------------
 ```
 //jquery
 $(el).attr('tabindex');
@@ -142,7 +194,8 @@ $(el).attr('tabindex');
 el.getAttributes('tabindex');
 ```
 
-### Get HTML
+Get HTML
+--------
 ```
 //jquery
 $(el).html();
@@ -151,7 +204,8 @@ $(el).html();
 el.innerHTML;
 ```
 
-### Get Outer Html
+Get Outer Html
+--------------
 ```
 //jquery
 $('div').append($(el).clone()).html();
@@ -160,7 +214,8 @@ $('div').append($(el).clone()).html();
 el.outerHtml
 ```
 
-### Get Style
+Get Style
+---------
 ```
 //jquery
 $(el).css(ruleName);
@@ -169,7 +224,8 @@ $(el).css(ruleName);
 getComputedStyle(el)[ruleName];
 ```
 
-### Get Text
+Get Text
+--------
 ```
 //jquery
 $(el).text();
@@ -178,7 +234,8 @@ $(el).text();
 el.textContent;
 ```
 
-### Has Class
+Has Class
+---------
 ```
 //jquery
 $(el).hasClass(className);
@@ -191,7 +248,8 @@ if(el.classList){
 }
 ```
 
-### Matches
+Matches
+-------
 ```
 //jquery
 $(el).is($(ortherEl));
@@ -200,7 +258,8 @@ $(el).is($(ortherEl));
 el === ortherEl
 ```
 
-### Next
+Next
+----
 ```
 //jquery
 $(el).next();
@@ -209,7 +268,8 @@ $(el).next();
 el.nextElementSbling;
 ```
 
-### Outer Width
+Outer Width
+-----------
 ```
 //jquery
 $(el).outerWidth()
@@ -218,7 +278,8 @@ $(el).outerWidth()
 el.offsetWidth;
 ```
 
-### Outer Height
+Outer Height
+------------
 ```
 //jquery
 $(el).outerHeight();
@@ -227,7 +288,8 @@ $(el).outerHeight();
 el.offsetHeight;
 ```
 
-### Parent
+Parent
+------
 ```
 //jquery
 $(el).parent();
@@ -236,7 +298,8 @@ $(el).parent();
 el.parentNode;
 ```
 
-### Position
+Position
+--------
 ```
 //jquery
 $(el).position();
@@ -248,7 +311,9 @@ $(el).position();
 }
 ```
 
-### Perpend(在什么地方之前插件内容)
+Perpend
+-------
+(在什么地方之前插件内容)
 ```
 //jquery
 $(parent).perpend(el);
@@ -257,7 +322,8 @@ $(parent).perpend(el);
 parent.inserBefor(el, parent.firstChild);
 ```
 
-### Prev
+Prev
+----
 ```
 //jquery
 $(el).prev();
@@ -266,7 +332,8 @@ $(el).prev();
 el.previousElementSibling
 ```
 
-### Remove
+Remove
+------
 ```
 //jquery
 $(el).remove();
@@ -275,7 +342,8 @@ $(el).remove();
 el.parentNode.removeChild(el);
 ```
 
-### Remove Class
+Remove Class
+------------
 ```
 //jquery
 $(el).removeClass(className);
@@ -288,7 +356,9 @@ if(el.classList){
 }
 ```
 
-### Replace From Html(替换内容)
+Replace From Html
+-----------------
+(替换内容)
 ```
 //jquery
 $(el).replaceWidth(string);
@@ -297,7 +367,8 @@ $(el).replaceWidth(string);
 el.outerHTML = string;
 ```
 
-### Set Attributes
+Set Attributes
+--------------
 ```
 //jquery
 $(el).attr('value', 3);
@@ -306,7 +377,8 @@ $(el).attr('value', 3);
 el.setAttributes('value', 3);
 ```
 
-### Set Html
+Set Html
+--------
 ```
 //jquery
 $(el).html(string);
@@ -315,7 +387,8 @@ $(el).html(string);
 el.innerHTML = string;
 ```
 
-### Set Text
+Set Text
+--------
 ```
 //jquery
 $(el).text(string);
@@ -324,7 +397,8 @@ $(el).text(string);
 el.textContent = string;
 ```
 
-### Set Style
+Set Style
+---------
 ```
 //juqery
 $(el).css('border-color', '#000000');
@@ -333,7 +407,8 @@ $(el).css('border-color', '#000000');
 el.style.borderColor = '#000000';
 ```
 
-### Siblings
+Siblings
+--------
 ```
 //jquery
 $(el).siblings();
@@ -344,7 +419,8 @@ Array.prototype.filter.call(el.parentNode.children, function(child) {
 })
 ```
 
-### Toggle Class
+Toggle Class
+------------
 ```
 //jquery
 $(el).toggleClass(className);
@@ -363,3 +439,5 @@ if(el.classList){
   el.className = classes.join('');
 }
 ```
+
+来自[youmightnotneedjquery](http://youmightnotneedjquery.com/#add_class)
