@@ -14,3 +14,47 @@ if(el.classList){
   el.className += '' + className;
 };
 ```
+### After
+```
+//jquery
+$(el).after(htmlString);
+
+//IE8+
+el.inserAdjacentHTML('afterend', htmlString);
+```
+
+### Before
+```
+//jquery
+$(el).before(htmlString);
+
+//IE8+
+el.insterAdjacentHTML('beforebegin', htmlString);
+```
+
+### Append
+```
+//juqery
+$(parent).append(el);
+
+//I8+
+parent.appendChild(el);
+```
+
+### Children
+```
+//jquery
+$(el).children();
+
+//IE8+
+el.children;
+```
+
+### Clone
+```
+//jquery
+$(el).clone();
+
+//IE8+
+el.cloneNode(true);
+```
