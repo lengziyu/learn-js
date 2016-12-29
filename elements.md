@@ -2,7 +2,7 @@
 > 与jQuery对比
 
 ## 目录
-- [Add Class](#显示进度条)
+- [Add Class](#Add Class)
 - [After](#After)
 - [Before](#Before)
 - [Append](#Append)
@@ -40,8 +40,8 @@
 - [Toggle Class](#Toggle Class)
 
 
-显示进度条
---------
+Add Class
+---------
 ```
 //jquery
 $(el).addClass(className);
