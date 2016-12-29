@@ -1,6 +1,7 @@
 # DOM操作
 > 与jQuery对比
 
+## 目录
 - [Add Class](#Add Class)
 - [After](#After)
 - [Before](#Before)
