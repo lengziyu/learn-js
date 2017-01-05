@@ -66,7 +66,7 @@ $.ajax({
   }
 })
 
-//
+//IE9+
 var request = new XMLHttpRequest();
 request.open('GET', '/url', true);
 
