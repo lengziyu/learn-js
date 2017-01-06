@@ -39,3 +39,4 @@ function unique(arr) {
     return ret;
 }
 ```
+那么，你猜猜，includes()又是用什么方法来比较的呢？如果想当然的话，会觉得肯定跟indexOf()一样喽。但是，程序员的世界里最怕想当然。翻一翻规范，发现它其实是使用的另一种比较方法，叫作“SameValueZero”比较（[https://tc39.github.io/ecma262...](https://tc39.github.io/ecma262/2016/#sec-samevaluezero)）。
