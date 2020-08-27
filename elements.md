@@ -16,7 +16,7 @@
 - [Find Children](#find-fhildren)
 - [Find Elements](#find-elements)
 - [Get Attributes](#get-attributes)
-- [Get HTML](#get html)
+- [Get HTML](#get-html)
 - [Get Outer Html](#get-outer-html)
 - [Get Style](#get-style)
 - [Get Text](#get-text)
